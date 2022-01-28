@@ -1,0 +1,16 @@
+body {
+    font-size: xx-large;
+}
+
+.male {
+    color:blue;
+}
+
+.female {
+    color:red;
+}
+
+.other {
+    background-color:black;
+    color:white;
+}
