@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block PageTitle %}Ma page{% endblock PageTitle %}</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+    <nav>
+        <div>Exercice</div>
+        <ul>
+            <li>
+                <a href="{% url 'exo:index' %}">Liste des personnes</a>
+            </li>
+            <li>
+                <a href="{% url 'exo:indexHTML' %}">Liste des personnes (HTML)</a>
+            </li>
+            <li>
+                <a href="{% url 'exo:indexGen' %}">Liste des personnes (Vues génériques)</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h1>{% block Title %}Titre{% endblock Title %}</h1>
+
+    <section>
+        {% block Content %}Contenu{% endblock Content %}
+    </section>
+
+</body>
+
+</html>

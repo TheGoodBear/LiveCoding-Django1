@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+
+{% block PageTitle %}Exo - Liste HTML{% endblock PageTitle %}
+
+{% block Title %}{{Title}}{% endblock Title %}
+
+{% block Content %}
+<ul>
+    {% for MyPerson in Persons %}
+        {% if MyPerson.sex == "m" %}
+            <li class='male'>
+        {% elif MyPerson.sex == "f" %}
+            <li class='female'>
+        {% endif %}
+        <a href="{% url 'exo:detailHTML' MyPerson.id %}">
+            ({{MyPerson.id}}) {{MyPerson.name}}
+        </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock Content %}

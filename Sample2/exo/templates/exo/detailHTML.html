@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+
+{% block PageTitle %}Exo - Détail HTML{% endblock PageTitle %}
+
+{% block Title %}{{Title}}{% endblock Title %}
+
+{% block Content %}
+    {% if Person.sex == "m" %}
+        <div class='male'>
+    {% elif Person.sex == "f" %}
+        <div class='female'>
+    {% endif %}
+    ({{Person.id}}) {{Person.name}}
+    </div>
+{% endblock Content %}

@@ -1,0 +1,44 @@
+body {
+    font-size: xx-large;
+}
+
+.male {
+    background-color:blue;
+    color: white;
+}
+
+.female {
+    background-color:red;
+    color: white;
+}
+
+.other {
+    background-color:black;
+    color:white;
+}
+
+nav {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: chocolate;
+}
+
+nav > div {
+    font-size: larger;
+    font-weight: bold;
+    margin: 0 30px;
+}
+
+ul > li {
+    list-style: none;
+}
+
+a {
+    padding: 01 10px;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    margin-left: 20px;
+}
