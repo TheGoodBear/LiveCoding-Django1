@@ -1,5 +1,8 @@
+from re import template
 from urllib import request
-from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 from django.views import generic
 from exo.models import Person
 
@@ -97,4 +100,32 @@ class DetailGen(generic.DetailView):
     
     template_name = "exo/detailGen.html"
     model = Person   
+
+
+class CreateGen(generic.CreateView):
+    """
+    """
     
+    template_name = "exo/createGen.html"
+    model = Person
+    fields = ["name", "sex"]
+    success_url = "/exo/HTML/"
+        
+
+class UpdateGen(generic.UpdateView):
+    """
+    """
+    
+    template_name = "exo/updateGen.html"
+    model = Person
+    fields = ["name", "sex"]
+    success_url = "/exo/HTML/"
+    
+
+class DeleteGen(generic.DeleteView):
+    """
+    """
+    
+    template_name = "exo/deleteGen.html"
+    model = Person
+    success_url = "/exo/HTML/"

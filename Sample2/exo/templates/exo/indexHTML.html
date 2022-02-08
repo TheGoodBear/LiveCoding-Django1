@@ -15,6 +15,12 @@
         <a href="{% url 'exo:detailHTML' MyPerson.id %}">
             ({{MyPerson.id}}) {{MyPerson.name}}
         </a>
+        <a class="button" href="{% url 'exo:updateGen' MyPerson.id %}">
+            Modifier
+        </a>
+        <a class="button" href="{% url 'exo:deleteGen' MyPerson.id %}">
+            Supprimer
+        </a>
         </li>
     {% endfor %}
 </ul>

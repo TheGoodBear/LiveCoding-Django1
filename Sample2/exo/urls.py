@@ -11,4 +11,7 @@ urlpatterns = [
     path(f"{app_name}/HTML/<int:id_person>/", views.DetailHTML, name="detailHTML"),
     path(f"{app_name}/Gen/", views.IndexGen.as_view(), name="indexGen"),
     path(f"{app_name}/Gen/<int:pk>/", views.DetailGen.as_view(), name="detailGen"),
+    path(f"{app_name}/Gen/create/", views.CreateGen.as_view(), name="createGen"),
+    path(f"{app_name}/Gen/<int:pk>/update/", views.UpdateGen.as_view(), name="updateGen"),
+    path(f"{app_name}/Gen/<int:pk>/delete/", views.DeleteGen.as_view(), name="deleteGen"),
 ]
